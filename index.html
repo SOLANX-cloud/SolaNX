@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolaNX - The Future of Renewable Energy Finance</title>
+  <style>
+    :root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  /* Background color tokens (Light Mode) */
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+  --color-bg-5: rgba(147, 51, 234, 0.08);
+  --color-bg-6: rgba(249, 115, 22, 0.08);
+  --color-bg-7: rgba(236, 72, 153, 0.08);
+  --color-bg-8: rgba(6, 182, 212, 0.08);
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  /* Common style patterns */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+
+  /* Typography */
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Custom SolaNX colors */
+  --solanx-green: #10b981;
+  --solanx-green-hover: #059669;
+  --solanx-green-light: rgba(16, 185, 129, 0.1);
+  --solanx-blue: #1e3a8a;
+  --solanx-blue-hover: #1e40af;
+  --solanx-accent: #f59e0b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+    --color-bg-1: rgba(29, 78, 216, 0.15);
+    --color-bg-2: rgba(180, 83, 9, 0.15);
+    --color-bg-3: rgba(21, 128, 61, 0.15);
+    --color-bg-4: rgba(185, 28, 28, 0.15);
+    --color-bg-5: rgba(107, 33, 168, 0.15);
+    --color-bg-6: rgba(194, 65, 12, 0.15);
+    --color-bg-7: rgba(190, 24, 93, 0.15);
+    --color-bg-8: rgba(8, 145, 178, 0.15);
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-20);
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-card-border);
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16) var(--space-20);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--solanx-green);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--solanx-green), var(--solanx-accent));
+  border-radius: var(--radius-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-32);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-24);
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  transition: color var(--duration-fast);
+  cursor: pointer;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--solanx-green);
+}
+
+.wallet-btn {
+  background: var(--solanx-green);
+  color: white;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-base);
+  border: none;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-fast);
+  font-size: var(--font-size-sm);
+}
+
+.wallet-btn:hover {
+  background: var(--solanx-green-hover);
+  transform: translateY(-1px);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* Main content */
+.main-content {
+  margin-top: 70px;
+  min-height: calc(100vh - 70px);
+}
+
+.page {
+  display: none;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.page.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--solanx-blue) 0%, var(--solanx-green) 100%);
+  padding: 80px 0 100px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-20);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.hero p {
+  font-size: clamp(16px, 2vw, 20px);
+  margin-bottom: var(--space-32);
+  opacity: 0.95;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--space-16);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: white;
+  color: var(--solanx-green);
+  padding: 14px 32px;
+  border-radius: var(--radius-base);
+  border: none;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  transition: all var(--duration-fast);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 14px 32px;
+  border-radius: var(--radius-base);
+  border: 2px solid white;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  transition: all var(--duration-fast);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--solanx-blue);
+  transform: translateY(-2px);
+}
+
+/* Stats Section */
+.stats {
+  background: var(--color-surface);
+  padding: 60px 0;
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-32);
+  text-align: center;
+}
+
+.stat-card {
+  background: var(--color-background);
+  padding: var(--space-32);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  transition: transform var(--duration-fast);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-value {
+  font-size: 48px;
+  font-weight: var(--font-weight-bold);
+  color: var(--solanx-green);
+  margin-bottom: var(--space-8);
+}
+
+.stat-label {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+}
+
+/* Features Section */
+.features {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-16);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-32);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-32);
+  margin-top: 60px;
+}
+
+.feature-card {
+  background: var(--color-surface);
+  padding: var(--space-32);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  transition: all var(--duration-fast);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--solanx-green-light);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-20);
+  font-size: 28px;
+}
+
+.feature-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-12);
+}
+
+.feature-description {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* How It Works */
+.how-it-works {
+  padding: 80px 0;
+  background: var(--color-surface);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-32);
+  margin-top: 60px;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  width: 80px;
+  height: 80px;
+  background: var(--solanx-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0 auto var(--space-20);
+}
+
+.step-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-12);
+}
+
+.step-description {
+  color: var(--color-text-secondary);
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--solanx-blue) 0%, var(--solanx-green) 100%);
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-24);
+}
+
+/* Marketplace */
+.marketplace-header {
+  padding: 60px 0 40px;
+}
+
+.search-filters {
+  background: var(--color-surface);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  margin-bottom: var(--space-32);
+}
+
+.filter-row {
+  display: flex;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+}
+
+.search-input,
+.filter-select {
+  flex: 1;
+  min-width: 200px;
+  padding: var(--space-12);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background: var(--color-background);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.marketplace-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-24);
+  margin-bottom: 80px;
+}
+
+.credit-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  overflow: hidden;
+  transition: all var(--duration-fast);
+  cursor: pointer;
+}
+
+.credit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.credit-header {
+  padding: var(--space-20);
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.credit-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-8);
+}
+
+.credit-region {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.credit-body {
+  padding: var(--space-20);
+}
+
+.credit-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-12);
+}
+
+.info-label {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.info-value {
+  font-weight: var(--font-weight-bold);
+  color: var(--solanx-green);
+}
+
+.verified-badge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--solanx-green);
+  padding: var(--space-4) var(--space-12);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  border: 1px solid var(--solanx-green);
+}
+
+/* Dashboard */
+.dashboard-header {
+  padding: 60px 0 40px;
+}
+
+.dashboard-welcome {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-8);
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-24);
+  margin-bottom: var(--space-32);
+}
+
+.kpi-card {
+  background: var(--color-surface);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+}
+
+.kpi-label {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-8);
+}
+
+.kpi-value {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  color: var(--solanx-green);
+}
+
+.kpi-unit {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-left: var(--space-4);
+}
+
+.chart-container {
+  background: var(--color-surface);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  margin-bottom: var(--space-32);
+  min-height: 300px;
+}
+
+.chart-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-20);
+}
+
+/* Forms */
+.form-container {
+  max-width: 600px;
+  margin: 60px auto 80px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: var(--space-32);
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-16);
+  margin-bottom: var(--space-32);
+}
+
+.progress-step {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+}
+
+.progress-step.active {
+  background: var(--solanx-green);
+  color: white;
+}
+
+.progress-step.completed {
+  background: var(--solanx-green);
+  color: white;
+}
+
+.form-group {
+  margin-bottom: var(--space-20);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: var(--space-12);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--solanx-green);
+  box-shadow: 0 0 0 3px var(--solanx-green-light);
+}
+
+.form-buttons {
+  display: flex;
+  gap: var(--space-16);
+  justify-content: space-between;
+  margin-top: var(--space-32);
+}
+
+.btn {
+  padding: var(--space-12) var(--space-24);
+  border-radius: var(--radius-base);
+  border: none;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+
+.btn-green {
+  background: var(--solanx-green);
+  color: white;
+}
+
+.btn-green:hover {
+  background: var(--solanx-green-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-outline:hover {
+  background: var(--color-secondary);
+}
+
+/* About Page */
+.about-section {
+  padding: 60px 0;
+}
+
+.mission-card {
+  background: var(--color-surface);
+  padding: var(--space-32);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  margin-bottom: var(--space-32);
+}
+
+.mission-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-16);
+  color: var(--solanx-green);
+}
+
+.mission-text {
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+/* Footer */
+.footer {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-card-border);
+  padding: 60px 0 30px;
+  margin-top: 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-32);
+  margin-bottom: var(--space-32);
+}
+
+.footer-section h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-16);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: var(--space-8);
+}
+
+.footer-links a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--duration-fast);
+}
+
+.footer-links a:hover {
+  color: var(--solanx-green);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--space-24);
+  border-top: 1px solid var(--color-card-border);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .marketplace-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-row {
+    flex-direction: column;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-32 {
+  margin-bottom: var(--space-32);
+}
+
+.mt-32 {
+  margin-top: var(--space-32);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-20);
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--space-16);
+  right: var(--space-16);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-base);
+  transition: background var(--duration-fast);
+}
+
+.modal-close:hover {
+  background: var(--color-secondary);
+}
+
+.notification {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background: var(--color-surface);
+  padding: var(--space-16) var(--space-24);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-lg);
+  z-index: 3000;
+  display: none;
+  animation: slideIn 0.3s ease-out;
+}
+
+.notification.show {
+  display: block;
+}
+
+.notification.success {
+  border-left: 4px solid var(--solanx-green);
+}
+
+.notification.error {
+  border-left: 4px solid var(--color-error);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="logo" onclick="navigateTo('home')">
+        <div class="logo-icon">☀</div>
+        <span>SolaNX</span>
+      </div>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a onclick="navigateTo('home')" class="active" id="nav-home">Home</a></li>
+          <li><a onclick="navigateTo('about')" id="nav-about">About</a></li>
+          <li><a onclick="navigateTo('marketplace')" id="nav-marketplace">Marketplace</a></li>
+          <li><a onclick="navigateTo('iot-setup')" id="nav-iot-setup">IoT Setup</a></li>
+          <li><a onclick="navigateTo('dashboard')" id="nav-dashboard">Dashboard <span id="lock-icon">🔒</span></a></li>
+          <li><a onclick="navigateTo('contact')" id="nav-contact">Contact</a></li>
+        </ul>
+        <button class="wallet-btn" onclick="toggleWallet()" id="wallet-button">Connect Wallet</button>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Home Page -->
+    <div id="page-home" class="page active">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content container">
+          <h1>The Future of Renewable Energy Finance</h1>
+          <p>Connect solar producers with global carbon credit buyers through verified blockchain technology</p>
+          <div class="hero-buttons">
+            <button class="btn-primary" onclick="navigateTo('onboard-panel')">Join as Panel Owner</button>
+            <button class="btn-secondary" onclick="navigateTo('onboard-investor')">Join as Investor</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value" id="stat-mwh">0</div>
+              <div class="stat-label">MWh Tokenized</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="stat-co2">0</div>
+              <div class="stat-label">Tons CO₂ Reduced</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="stat-partners">0</div>
+              <div class="stat-label">Global Partners</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features">
+        <div class="container">
+          <h2 class="section-title">Why Choose SolaNX?</h2>
+          <p class="section-subtitle">Empowering the green energy revolution with cutting-edge technology</p>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+              <h3 class="feature-title">IoT-Verified Energy</h3>
+              <p class="feature-description">Real-time solar data monitoring with ESP32 devices</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📈</div>
+              <h3 class="feature-title">Carbon Credit Trading</h3>
+              <p class="feature-description">Transparent, Verra-verified credits on blockchain</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🏆</div>
+              <h3 class="feature-title">Smart Staking</h3>
+              <p class="feature-description">Earn returns by investing in solar projects</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🛡️</div>
+              <h3 class="feature-title">Decentralized Ownership</h3>
+              <p class="feature-description">Full transparency and control through Web3</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section class="how-it-works">
+        <div class="container">
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-subtitle">Three simple steps to join the green energy revolution</p>
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h3 class="step-title">Produce Clean Energy</h3>
+              <p class="step-description">Connect your solar panels with IoT devices</p>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <h3 class="step-title">Earn &amp; Tokenize</h3>
+              <p class="step-description">Automatic token minting on verified energy</p>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <h3 class="step-title">Trade Globally</h3>
+              <p class="step-description">Sell carbon credits to buyers worldwide</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <h2>Ready to join the green energy revolution?</h2>
+          <div class="hero-buttons" style="margin-top: 32px;">
+            <button class="btn-primary" onclick="navigateTo('onboard-panel')">Join as Panel Owner</button>
+            <button class="btn-secondary" onclick="navigateTo('onboard-investor')">Join as Investor</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="page-about" class="page">
+      <section class="about-section">
+        <div class="container">
+          <h1 class="section-title">About SolaNX</h1>
+          <div class="mission-card">
+            <h2 class="mission-title">Our Mission</h2>
+            <p class="mission-text">To create a transparent, automated, and profitable ecosystem for renewable energy producers and carbon offset buyers using IoT + Blockchain + Web3 technologies.</p>
+          </div>
+          <div class="mission-card">
+            <h2 class="mission-title">Our Vision</h2>
+            <p class="mission-text">We envision a world where every solar panel owner can participate in the global carbon credit marketplace, earning fair compensation for their contribution to a sustainable future. By leveraging blockchain technology and IoT sensors, we're building the infrastructure for the green energy revolution.</p>
+          </div>
+          <div class="mission-card">
+            <h2 class="mission-title">Technology Stack</h2>
+            <p class="mission-text">SolaNX combines cutting-edge technologies: Next.js frontend, Django backend, Solidity smart contracts on Polygon, ESP32 IoT devices, IPFS storage, and AI-powered MRV (Measurement, Reporting, Verification) modules for automated audits.</p>
+          </div>
+          <div class="mission-card">
+            <h2 class="mission-title">Our Partners</h2>
+            <p class="mission-text">We work with leading verification standards including Verra and Gold Standard to ensure all carbon credits meet international compliance requirements. Our partnerships span across 200+ organizations globally.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Marketplace Page -->
+    <div id="page-marketplace" class="page">
+      <section class="marketplace-header">
+        <div class="container">
+          <h1 class="section-title">Carbon Credit Marketplace</h1>
+          <p class="section-subtitle">Browse and purchase verified carbon credits from solar projects worldwide</p>
+          
+          <div class="search-filters">
+            <div class="filter-row">
+              <input type="text" class="search-input" placeholder="Search projects..." id="search-projects">
+              <select class="filter-select" id="filter-region">
+                <option value="">All Regions</option>
+                <option value="usa">USA</option>
+                <option value="india">India</option>
+                <option value="morocco">Morocco</option>
+              </select>
+              <select class="filter-select" id="filter-price">
+                <option value="">All Prices</option>
+                <option value="low">Under $15</option>
+                <option value="mid">$15-$20</option>
+                <option value="high">Over $20</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="marketplace-grid" id="marketplace-grid">
+            <!-- Credit cards will be inserted here -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="page-dashboard" class="page">
+      <section class="dashboard-header">
+        <div class="container">
+          <h1 class="section-title">Dashboard</h1>
+          <p class="dashboard-welcome" id="dashboard-welcome">Welcome back!</p>
+          
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-label">Total Energy Generated</div>
+              <div class="kpi-value">12,450<span class="kpi-unit">kWh</span></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">CO₂ Avoided</div>
+              <div class="kpi-value">8.7<span class="kpi-unit">Tons</span></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">E-Tokens Balance</div>
+              <div class="kpi-value">12,450<span class="kpi-unit">ETK</span></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">CCT Balance</div>
+              <div class="kpi-value">8.7<span class="kpi-unit">CCT</span></div>
+            </div>
+          </div>
+
+          <div class="chart-container">
+            <h3 class="chart-title">Energy Production (Last 7 Days)</h3>
+            <div style="height: 250px; display: flex; align-items: flex-end; gap: 12px; padding: 20px 0;">
+              <div style="flex: 1; background: var(--solanx-green); height: 60%; border-radius: 4px;"></div>
+              <div style="flex: 1; background: var(--solanx-green); height: 75%; border-radius: 4px;"></div>
+              <div style="flex: 1; background: var(--solanx-green); height: 85%; border-radius: 4px;"></div>
+              <div style="flex: 1; background: var(--solanx-green); height: 70%; border-radius: 4px;"></div>
+              <div style="flex: 1; background: var(--solanx-green); height: 90%; border-radius: 4px;"></div>
+              <div style="flex: 1; background: var(--solanx-green); height: 100%; border-radius: 4px;"></div>
+              <div style="flex: 1; background: var(--solanx-green); height: 95%; border-radius: 4px;"></div>
+            </div>
+          </div>
+
+          <div class="mission-card">
+            <h3 class="mission-title">Recent Transactions</h3>
+            <div style="margin-top: 20px;">
+              <div style="padding: 16px; border-bottom: 1px solid var(--color-card-border);">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                  <span style="font-weight: 600;">Token Mint</span>
+                  <span style="color: var(--solanx-green);">+1,850 ETK</span>
+                </div>
+                <div style="color: var(--color-text-secondary); font-size: 12px;">2 hours ago</div>
+              </div>
+              <div style="padding: 16px; border-bottom: 1px solid var(--color-card-border);">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                  <span style="font-weight: 600;">Credit Sale</span>
+                  <span style="color: var(--solanx-green);">+$185.50</span>
+                </div>
+                <div style="color: var(--color-text-secondary); font-size: 12px;">1 day ago</div>
+              </div>
+              <div style="padding: 16px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                  <span style="font-weight: 600;">Verification Approved</span>
+                  <span style="color: var(--solanx-green);">+2.5 CCT</span>
+                </div>
+                <div style="color: var(--color-text-secondary); font-size: 12px;">2 days ago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- IoT Setup Page -->
+    <div id="page-iot-setup" class="page">
+      <section class="about-section">
+        <div class="container">
+          <h1 class="section-title">IoT Device Setup</h1>
+          <p class="section-subtitle">Follow these steps to connect your ESP32 device to your solar panels</p>
+          
+          <div class="mission-card">
+            <h2 class="mission-title">Step 1: Mount the Device</h2>
+            <p class="mission-text">Securely mount the ESP32 device near your solar panel array. Ensure it has access to power (USB or solar) and Wi-Fi signal.</p>
+          </div>
+
+          <div class="mission-card">
+            <h2 class="mission-title">Step 2: Power On</h2>
+            <p class="mission-text">Connect the device to power via USB cable or solar panel output. The LED should blink blue indicating it's in setup mode.</p>
+          </div>
+
+          <div class="mission-card">
+            <h2 class="mission-title">Step 3: Connect to Wi-Fi</h2>
+            <p class="mission-text">On your phone, connect to the Wi-Fi network named "SolaNX-Setup". This is a temporary network created by your device.</p>
+          </div>
+
+          <div class="mission-card">
+            <h2 class="mission-title">Step 4: Pair with Account</h2>
+            <p class="mission-text">Scan the QR code on your device or enter the device ID manually in your dashboard to complete pairing.</p>
+          </div>
+
+          <div class="mission-card">
+            <h2 class="mission-title">Technical Specifications</h2>
+            <p class="mission-text">Device: ESP32 with MQTT protocol | Frequency: Reports every 5 minutes | Power: 5V USB or 12V solar | Range: 50m Wi-Fi | Compatibility: All major solar panel brands</p>
+          </div>
+
+          <div class="mission-card">
+            <h2 class="mission-title">Need Help?</h2>
+            <p class="mission-text">Join our Discord community or email support@solanx.com for technical assistance. Average response time: 2 hours.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="page-contact" class="page">
+      <section class="about-section">
+        <div class="container">
+          <h1 class="section-title">Contact Us</h1>
+          <p class="section-subtitle">Have questions? We'd love to hear from you</p>
+          
+          <div class="form-container">
+            <form onsubmit="handleContactSubmit(event)">
+              <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Subject</label>
+                <input type="text" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Message</label>
+                <textarea class="form-textarea" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-green" style="width: 100%;">Send Message</button>
+            </form>
+          </div>
+
+          <div class="mission-card mt-32">
+            <h2 class="mission-title">Other Ways to Reach Us</h2>
+            <p class="mission-text"><strong>Email:</strong> partnerships@solanx.com</p>
+            <p class="mission-text"><strong>Discord:</strong> discord.gg/solanx</p>
+            <p class="mission-text"><strong>Twitter:</strong> @SolaNX</p>
+            <p class="mission-text"><strong>GitHub:</strong> github.com/solanx</p>
+          </div>
+
+          <div class="mission-card">
+            <h2 class="mission-title">Frequently Asked Questions</h2>
+            <div id="faq-container"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Onboard Panel Owner -->
+    <div id="page-onboard-panel" class="page">
+      <div class="form-container">
+        <div class="form-header">
+          <h1>Join as Panel Owner</h1>
+          <div class="progress-steps">
+            <div class="progress-step active" id="step-1">1</div>
+            <div class="progress-step" id="step-2">2</div>
+            <div class="progress-step" id="step-3">3</div>
+            <div class="progress-step" id="step-4">4</div>
+          </div>
+        </div>
+
+        <form id="panel-owner-form">
+          <!-- Step 1 -->
+          <div class="form-step" id="panel-step-1">
+            <h2 style="margin-bottom: 24px;">Personal Information</h2>
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Location</label>
+              <input type="text" class="form-input" placeholder="City, Country" required>
+            </div>
+            <div class="form-buttons">
+              <button type="button" class="btn btn-outline" onclick="navigateTo('home')">Cancel</button>
+              <button type="button" class="btn btn-green" onclick="nextStep(2)">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-step" id="panel-step-2" style="display: none;">
+            <h2 style="margin-bottom: 24px;">Farm Details</h2>
+            <div class="form-group">
+              <label class="form-label">Farm Name</label>
+              <input type="text" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Capacity (kWp)</label>
+              <input type="number" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Panel Count</label>
+              <input type="number" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Ownership Documents</label>
+              <input type="file" class="form-input" accept=".pdf,.jpg,.png">
+            </div>
+            <div class="form-buttons">
+              <button type="button" class="btn btn-outline" onclick="prevStep(1)">Back</button>
+              <button type="button" class="btn btn-green" onclick="nextStep(3)">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="form-step" id="panel-step-3" style="display: none;">
+            <h2 style="margin-bottom: 24px;">Purpose Selection</h2>
+            <div class="form-group">
+              <label class="form-label">What would you like to do?</label>
+              <select class="form-select" required>
+                <option value="">Select an option</option>
+                <option value="expand">Expand Existing Farm</option>
+                <option value="sell">Sell Stake in Farm</option>
+              </select>
+            </div>
+            <div class="mission-card" style="margin-top: 20px;">
+              <p class="mission-text"><strong>Expand:</strong> Get funding to add more panels to your solar farm</p>
+              <p class="mission-text" style="margin-top: 12px;"><strong>Sell Stake:</strong> Offer ownership shares to investors and receive immediate capital</p>
+            </div>
+            <div class="form-buttons">
+              <button type="button" class="btn btn-outline" onclick="prevStep(2)">Back</button>
+              <button type="button" class="btn btn-green" onclick="nextStep(4)">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="form-step" id="panel-step-4" style="display: none;">
+            <h2 style="margin-bottom: 24px;">IoT Device Setup</h2>
+            <div class="mission-card">
+              <h3 class="mission-title">Setup Instructions</h3>
+              <p class="mission-text">1. Power on your ESP32 device</p>
+              <p class="mission-text">2. Connect to Wi-Fi network 'SolaNX-Setup'</p>
+              <p class="mission-text">3. Scan the QR code below with your phone</p>
+            </div>
+            <div style="text-align: center; margin: 32px 0;">
+              <div style="width: 200px; height: 200px; background: var(--color-secondary); margin: 0 auto; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 48px;">📱</div>
+              <p style="margin-top: 16px; color: var(--color-text-secondary);">QR Code for Device Pairing</p>
+            </div>
+            <div class="mission-card">
+              <p class="mission-text"><strong>Status:</strong> <span style="color: var(--solanx-accent);">⏳ Waiting for connection...</span></p>
+            </div>
+            <div class="form-buttons">
+              <button type="button" class="btn btn-outline" onclick="prevStep(3)">Back</button>
+              <button type="button" class="btn btn-green" onclick="completePanelOnboarding()">Complete Setup</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Onboard Investor -->
+    <div id="page-onboard-investor" class="page">
+      <div class="form-container">
+        <div class="form-header">
+          <h1>Join as Investor</h1>
+          <div class="progress-steps">
+            <div class="progress-step active" id="investor-step-1">1</div>
+            <div class="progress-step" id="investor-step-2">2</div>
+            <div class="progress-step" id="investor-step-3">3</div>
+            <div class="progress-step" id="investor-step-4">4</div>
+          </div>
+        </div>
+
+        <form id="investor-form">
+          <!-- Step 1 -->
+          <div class="form-step" id="investor-form-step-1">
+            <h2 style="margin-bottom: 24px;">Personal Information</h2>
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-input" required>
+            </div>
+            <div class="form-buttons">
+              <button type="button" class="btn btn-outline" onclick="navigateTo('home')">Cancel</button>
+              <button type="button" class="btn btn-green" onclick="nextInvestorStep(2)">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-step" id="investor-form-step-2" style="display: none;">
+            <h2 style="margin-bottom: 24px;">KYC Verification</h2>
+            <div class="form-group">
+              <label class="form-label">Government ID</label>
+              <input type="file" class="form-input" accept=".pdf,.jpg,.png">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Address Proof</label>
+              <input type="file" class="form-input" accept=".pdf,.jpg,.png">
+            </div>
+            <div class="mission-card">
+              <p class="mission-text">KYC verification ensures compliance with international regulations and protects all platform users.</p>
+            </div>
+            <div class="form-buttons">
+              <button type="button" class="btn btn-outline" onclick="prevInvestorStep(1)">Back</button>
+              <button type="button" class="btn btn-green" onclick="nextInvestorStep(3)">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="form-step" id="investor-form-step-3" style="display: none;">
+            <h2 style="margin-bottom: 24px;">Investment Options</h2>
+            <div class="form-group">
+              <label class="form-label">I want to:</label>
+              <select class="form-select" required>
+                <option value="">Select an option</option>
+                <option value="existing">Buy Stake in Existing Farm</option>
+                <option value="new">Invest in New Expansion Project</option>
+              </select>
+            </div>
+            <div class="mission-card">
+              <h3 class="mission-title">Expected Returns</h3>
+              <p class="mission-text">• Existing Farms: 8-12% annual returns</p>
+              <p class="mission-text">• New Projects: 12-15% annual returns (higher risk)</p>
+            </div>
+            <div class="form-buttons">
+              <button type="button" class="btn btn-outline" onclick="prevInvestorStep(2)">Back</button>
+              <button type="button" class="btn btn-green" onclick="nextInvestorStep(4)">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="form-step" id="investor-form-step-4" style="display: none;">
+            <h2 style="margin-bottom: 24px;">Select Project &amp; Amount</h2>
+            <div class="form-group">
+              <label class="form-label">Project</label>
+              <select class="form-select" required>
+                <option value="">Select a project</option>
+                <option value="sunrise">Sunrise Solar Farm - California</option>
+                <option value="delhi">Delhi Green Initiative - India</option>
+                <option value="sahara">Sahara Solar Park - Morocco</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Investment Amount (USD)</label>
+              <input type="number" class="form-input" placeholder="Minimum $1,000" required>
+            </div>
+            <div class="mission-card">
+              <p class="mission-text"><strong>Estimated Annual Return:</strong> $120 - $150</p>
+              <p class="mission-text"><strong>Lock Period:</strong> 12 months</p>
+            </div>
+            <div class="form-buttons">
+              <button type="button" class="btn btn-outline" onclick="prevInvestorStep(3)">Back</button>
+              <button type="button" class="btn btn-green" onclick="completeInvestorOnboarding()">Complete Investment</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>SolaNX</h3>
+          <p style="color: var(--color-text-secondary); margin-top: 12px;">Empowering the green energy revolution through blockchain technology.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#" onclick="navigateTo('about'); return false;">About</a></li>
+            <li><a href="#" onclick="navigateTo('marketplace'); return false;">Marketplace</a></li>
+            <li><a href="#" onclick="navigateTo('iot-setup'); return false;">IoT Setup</a></li>
+            <li><a href="#" onclick="navigateTo('contact'); return false;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Whitepaper</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Developer Tools</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Compliance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 SolaNX. All rights reserved. Powered by blockchain technology.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification -->
+  <div id="notification" class="notification"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
